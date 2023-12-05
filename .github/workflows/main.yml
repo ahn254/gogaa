@@ -1,0 +1,19 @@
+name: Build
+
+on:
+   - push
+   - pull_request
+
+defaults:
+   run:
+     shell: bash
+     # working-directory: src
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo $HOME
+      - run: echo $GOCACHE
+      - run: echo $XDC_CACHE_HOME
